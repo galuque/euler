@@ -2,7 +2,7 @@
 
 Tackling Project Euler problems in different programming lanuguages to better understand the tradeoffs and strengths of each one.
 
-So far, thera are solutions in C, Python, Clojure and Haskell.
+So far, there are solutions in C, Python, Clojure and Haskell.
 
 ## Dependencies
 
