@@ -1,6 +1,6 @@
 # Project Euler
 
-Tackling Project Euler problems in different programming lanuguages to better understand the tradeoffs and strengths of each one.
+Tackling [Project Euler](https://projecteuler.net/) problems in different programming lanuguages to better understand the tradeoffs and strengths of each one.
 
 So far, there are solutions in C, Python, Clojure and Haskell.
 
