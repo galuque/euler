@@ -14,4 +14,4 @@ A Python 3.7+ interpreter
 
 [Clojure CLI](https://clojure.org/guides/getting_started) (and Java)
 
-and [Stack](https://docs.haskellstack.org/en/stable/README/)
+and [Stack](https://docs.haskellstack.org/en/stable/README/) for Haskell
