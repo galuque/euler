@@ -1,4 +1,4 @@
-(ns galuque.euler.p5
+(ns galuque.euler.p6
   (:gen-class))
 
 (defn sum-sqr-difference [k]
@@ -10,9 +10,13 @@
                        :sqrs 0}
                       (range 1 (inc k)))
               (update-in [:sum] #(Math/pow % 2)))]
-    (int (- (:sum m) (:sqrs m)))))
+    (- (:sum m) (:sqrs m))))
 
 (comment
   (sum-sqr-difference 100)
   ;; => 25164150
 )
+(defn -main [arg]
+  (let [answer (sum-sqr-difference (Long/parseLong arg))]
+    (println
+     (format "%d" (biginteger answer)))))
