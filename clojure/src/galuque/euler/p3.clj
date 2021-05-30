@@ -1,4 +1,4 @@
-(ns p3
+(ns galuque.euler.p3
   (:gen-class))
 
 (def prime-numbers

@@ -1,4 +1,4 @@
-(ns p4
+(ns galuque.euler.p4
   (:gen-class))
 
 (defn palindrome? [n]

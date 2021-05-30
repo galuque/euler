@@ -4,3 +4,5 @@
 *.classes
 *.hi
 *.o
+bin/
+obj/

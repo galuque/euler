@@ -1,4 +1,4 @@
-(ns p5
+(ns galuque.euler.p5
   (:gen-class))
 
 (defn not-divisible? [n div]
@@ -6,12 +6,9 @@
 
 (def sieve
   ((fn step [s]
-     (lazy-seq
-      (cons
-       (first s)
-       (step
-        (filter #(not-divisible? % (first s))
-                (rest s))))))
+     (lazy-seq (cons (first s)
+                     (step (filter #(not-divisible? % (first s))
+                                   (rest s))))))
    (iterate inc 2)))
 
 (defn smallest-multiple [k]
@@ -36,5 +33,4 @@
   ;; "Elapsed time: 0.168377 msecs"
   ;; "Elapsed time: 0.047399 msecs"
   ;; "Elapsed time: 0.070401 msecs"
-
 )
