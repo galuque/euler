@@ -19,3 +19,12 @@
                     (lazy-seq (next-primes (next-sieve sieve candidate)
                                            (+ candidate 2))))))]
     (cons 2 (lazy-seq (next-primes {} 3)))))
+
+(defn square [n]
+  (* n n))
+
+(defn sum-of-squares [n]
+  (reduce + (map square (range 1 (inc n)))))
+
+(defn square-of-sums [n]
+  (square (reduce + (range 1 (inc n)))))
