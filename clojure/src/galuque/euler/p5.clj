@@ -1,18 +1,9 @@
 (ns galuque.euler.p5
-  (:gen-class))
-
-(defn not-divisible? [n div]
-  (not= 0 (mod n div)))
-
-(def sieve
-  ((fn step [s]
-     (lazy-seq (cons (first s)
-                     (step (filter #(not-divisible? % (first s))
-                                   (rest s))))))
-   (iterate inc 2)))
+  (:gen-class)
+  (:require [galuque.euler.utils :as utils]))
 
 (defn smallest-multiple [k]
-  (let [primes (take-while #(< % k) sieve)
+  (let [primes (take-while #(< % k) (utils/sieve))
         result (reduce
                 (fn [acc prime]
                   (let [exponent (Math/floor (/ (Math/log k)
