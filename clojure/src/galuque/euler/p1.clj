@@ -1,4 +1,4 @@
-(ns p1
+(ns galuque.euler.p1
   (:gen-class))
 
 ;; fastest
