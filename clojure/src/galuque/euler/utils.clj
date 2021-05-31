@@ -20,6 +20,13 @@
                                            (+ candidate 2))))))]
     (cons 2 (lazy-seq (next-primes {} 3)))))
 
+(defn prime-factors [n primes]
+  ((fn f [n [h & r :as ps]]
+     (cond (< n 2) '()
+           (zero? (mod n h)) (cons h (lazy-seq (f (quot n h) ps)))
+           :else (recur n r)))
+   n primes))
+
 (defn square [n]
   (* n n))
 
