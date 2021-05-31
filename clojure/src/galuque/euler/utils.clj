@@ -41,3 +41,11 @@
 
 (defn square-of-sums [n]
   (square (reduce + (range 1 (inc n)))))
+
+(defn ! [n]
+  (reduce *' (range 1 (inc n))))
+
+(defn choose [n r]
+  (/ (! n)
+     (*' (! r)
+         (! (- n r)))))
