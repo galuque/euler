@@ -1,4 +1,4 @@
-(ns galuque.euler.p8
+(ns galuque.euler.p008
   (:gen-class))
 
 (def thousand-digit-number

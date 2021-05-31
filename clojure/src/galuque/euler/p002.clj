@@ -1,4 +1,4 @@
-(ns galuque.euler.p2
+(ns galuque.euler.p002
   (:gen-class))
 
 (def fibonacci

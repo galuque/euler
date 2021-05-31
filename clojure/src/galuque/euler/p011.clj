@@ -1,4 +1,4 @@
-(ns galuque.euler.p11
+(ns galuque.euler.p011
   (:gen-class)
   (:require [clojure.string :as str]))
 
