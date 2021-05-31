@@ -32,3 +32,6 @@
   ;; "Elapsed time: 293.748546 msecs"
   ;; => 76576500
   )
+
+(defn -main [arg]
+  (println (triangle-num-n-divisors (Long/parseLong arg))))

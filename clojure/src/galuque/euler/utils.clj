@@ -22,9 +22,15 @@
 
 (defn prime-factors [n primes]
   ((fn f [n [h & r :as ps]]
-     (cond (< n 2) '()
-           (zero? (mod n h)) (cons h (lazy-seq (f (quot n h) ps)))
-           :else (recur n r)))
+     (cond 
+       (< n 2) 
+       '()
+           
+       (zero? (mod n h)) 
+       (cons h (lazy-seq (f (quot n h) ps)))
+           
+       :else 
+       (recur n r)))
    n primes))
 
 (defn square [n]
