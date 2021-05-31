@@ -1,4 +1,4 @@
-(ns galuque.euler.p9
+(ns galuque.euler.p009
   (:gen-class))
 
 (defn pythagoran-triple? [a b c]

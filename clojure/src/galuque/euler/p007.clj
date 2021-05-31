@@ -1,4 +1,4 @@
-(ns galuque.euler.p7
+(ns galuque.euler.p007
   (:gen-class)
   (:require [galuque.euler.utils :as utils]))
 
