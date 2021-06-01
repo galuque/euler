@@ -49,3 +49,6 @@
   (/ (! n)
      (*' (! r)
          (! (- n r)))))
+
+(defn pow [n exp]
+  (.pow (bigdec n) exp))
