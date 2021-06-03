@@ -1,24 +1,10 @@
 (ns galuque.euler.p003
-  (:gen-class))
+  (:gen-class)
+  (:require [galuque.euler.utils :as u]))
 
-(def prime-numbers
-  ((fn f [x]
-     (cons x
-           (lazy-seq
-            (f (first
-                (drop-while
-                 (fn [n]
-                   (some #(zero? (mod n %))
-                         (take-while #(<= (* % %) n) prime-numbers)))
-                 (iterate inc (inc x))))))))
-   2))
+(def ^:private primes (u/sieve))
 
-(defn factorize [n]
-  ((fn f [n [h & r :as ps]]
-     (cond (< n 2) '()
-           (zero? (mod n h)) (cons h (lazy-seq (f (quot n h) ps)))
-           :else (recur n r)))
-   n prime-numbers))
+(defn factorize [n] (u/prime-factors n primes))
 
 (defn p3 [n]
   (apply max (factorize n)))
