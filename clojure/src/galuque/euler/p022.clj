@@ -1,15 +1,11 @@
 (ns galuque.euler.p022
   (:gen-class)
-  (:require [clojure.java.io :as io]
-            [clojure.string :as str]
-            [clojure.edn :as edn]))
+  (:require [clojure.java.io :as io]))
 
-(def names (-> "p022/input.txt"
-               io/resource
-               slurp
-               (str/split #",")
-               (as-> input
-                     (mapv edn/read-string input))))
+(def names (->> "p022/input.txt"
+                io/resource
+                slurp
+                (re-seq #"\w+")))
 
 (defn ch->value [ch]
   (- (int ch) 64))
