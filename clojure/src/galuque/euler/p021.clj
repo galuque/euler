@@ -2,8 +2,7 @@
   (:gen-class))
 
 (defn proper-divisors [n]
-  (let [base (filter #(zero? (rem n %)) (range 2 (Math/sqrt n)))]
-    (concat '(1) (map #(/ n %) base) base)))
+  (filter (fn [d] (zero? (rem n d))) (range 1 n)))
 
 (defn d [n]
   (reduce + (proper-divisors n)))
