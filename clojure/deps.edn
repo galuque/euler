@@ -2,7 +2,8 @@
  ["src" "classes" "resources"]
  
  :deps 
- {org.clojure/clojure {:mvn/version "1.11.0-alpha1"}}
+ {org.clojure/clojure {:mvn/version "1.11.0-alpha1"}
+  org.clojure/math.combinatorics {:mvn/version "0.1.6"}}
  
  :aliases 
  {:reveal
